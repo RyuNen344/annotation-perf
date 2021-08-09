@@ -1,0 +1,44 @@
+package com.ryunen344.annotation.perf.db.feature.tivi.entity
+
+import androidx.room.Embedded
+import androidx.room.Ignore
+import androidx.room.Relation
+import com.ryunen344.annotation.perf.db.feature.tivi.view.FollowedShowsWatchStats
+import java.util.*
+
+class FollowedShowEntryWithShow : EntryWithShow<FollowedShowEntry> {
+    @Embedded
+    override lateinit var entry: FollowedShowEntry
+
+    @Relation(parentColumn = "show_id", entityColumn = "id")
+    override lateinit var relations: List<TiviShow>
+
+    @Relation(parentColumn = "show_id", entityColumn = "show_id")
+    override lateinit var images: List<ShowTmdbImage>
+
+    @Relation(parentColumn = "id", entityColumn = "id")
+    lateinit var _stats: List<FollowedShowsWatchStats>
+
+    val stats: FollowedShowsWatchStats?
+        get() = _stats.firstOrNull()
+
+    @delegate:Ignore
+    val backdrop: ShowTmdbImage? by lazy(LazyThreadSafetyMode.NONE) {
+        images.findHighestRatedBackdrop()
+    }
+
+    @delegate:Ignore
+    override val poster: ShowTmdbImage? by lazy(LazyThreadSafetyMode.NONE) {
+        images.findHighestRatedPoster()
+    }
+
+    override fun equals(other: Any?): Boolean = when {
+        other === this -> true
+        other is FollowedShowEntryWithShow -> {
+            entry == other.entry && relations == other.relations && stats == other.stats && images == other.images
+        }
+        else -> false
+    }
+
+    override fun hashCode(): Int = Objects.hash(entry, relations, stats, images)
+}

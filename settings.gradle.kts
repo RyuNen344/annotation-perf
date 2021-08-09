@@ -24,4 +24,5 @@ include(
     ":feature:dagashi",
     ":feature:simple",
     ":feature:sunflower",
+    ":feature:tivi",
 )

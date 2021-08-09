@@ -4,8 +4,12 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.ryunen344.annotation.perf.db.converter.CalendarConverter
+import com.ryunen344.annotation.perf.db.converter.DayOfWeekConverter
+import com.ryunen344.annotation.perf.db.converter.InstantConverter
 import com.ryunen344.annotation.perf.db.converter.LocalDateTimeConverter
+import com.ryunen344.annotation.perf.db.converter.LocalTimeConverter
 import com.ryunen344.annotation.perf.db.converter.OffsetDateTimeConverter
+import com.ryunen344.annotation.perf.db.converter.ZoneIdConverter
 import com.ryunen344.annotation.perf.db.converter.ZonedDateTimeConverter
 import com.ryunen344.annotation.perf.db.feature.dagashi.dao.IssueDao
 import com.ryunen344.annotation.perf.db.feature.dagashi.dao.MileStoneDao
@@ -17,14 +21,18 @@ import com.ryunen344.annotation.perf.db.feature.dagashi.entity.MileStoneEntity
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.StashedIssueEntity
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.SummaryIssueEntity
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.relation.IssueLabelCrossRef
+import com.ryunen344.annotation.perf.db.feature.simple.dao.SimpleUserDao
 import com.ryunen344.annotation.perf.db.feature.simple.dao.TimeSetDao
-import com.ryunen344.annotation.perf.db.feature.simple.dao.UserDao
+import com.ryunen344.annotation.perf.db.feature.simple.entity.SimpleUser
 import com.ryunen344.annotation.perf.db.feature.simple.entity.TimeSet
-import com.ryunen344.annotation.perf.db.feature.simple.entity.User
 import com.ryunen344.annotation.perf.db.feature.sunflower.dao.GardenPlantingDao
 import com.ryunen344.annotation.perf.db.feature.sunflower.dao.PlantDao
 import com.ryunen344.annotation.perf.db.feature.sunflower.entity.GardenPlanting
 import com.ryunen344.annotation.perf.db.feature.sunflower.entity.Plant
+import com.ryunen344.annotation.perf.db.feature.tivi.converter.ImageTypeConverter
+import com.ryunen344.annotation.perf.db.feature.tivi.converter.PendingActionConverter
+import com.ryunen344.annotation.perf.db.feature.tivi.converter.RequestConverter
+import com.ryunen344.annotation.perf.db.feature.tivi.converter.ShowStatusConverter
 
 @Database(
     entities = [
@@ -36,8 +44,8 @@ import com.ryunen344.annotation.perf.db.feature.sunflower.entity.Plant
         IssueLabelCrossRef::class,
         IssueFts::class,
         StashedIssueEntity::class,
+        SimpleUser::class,
         TimeSet::class,
-        User::class,
         GardenPlanting::class,
         Plant::class,
     ],
@@ -47,16 +55,24 @@ import com.ryunen344.annotation.perf.db.feature.sunflower.entity.Plant
 @TypeConverters(
     value = [
         CalendarConverter::class,
+        DayOfWeekConverter::class,
+        InstantConverter::class,
         LocalDateTimeConverter::class,
+        LocalTimeConverter::class,
         OffsetDateTimeConverter::class,
-        ZonedDateTimeConverter::class
+        ZonedDateTimeConverter::class,
+        ZoneIdConverter::class,
+        ImageTypeConverter::class,
+        PendingActionConverter::class,
+        RequestConverter::class,
+        ShowStatusConverter::class
     ]
 )
 abstract class PerfDatabase : RoomDatabase() {
     abstract val issueDao: IssueDao
     abstract val mileStoneDao: MileStoneDao
+    abstract val simpleUserDao: SimpleUserDao
     abstract val timeSetDao: TimeSetDao
-    abstract val userDao: UserDao
     abstract val gardenPlantingDao: GardenPlantingDao
     abstract val plantDao: PlantDao
 }
