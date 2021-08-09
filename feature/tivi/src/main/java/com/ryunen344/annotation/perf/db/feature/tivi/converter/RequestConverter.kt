@@ -4,6 +4,7 @@ import androidx.room.TypeConverter
 import com.ryunen344.annotation.perf.db.feature.tivi.entity.Request
 
 object RequestConverter {
+    @JvmStatic
     @TypeConverter
     fun fromString(value: String?): Request? {
         return value?.let { tag ->
@@ -11,6 +12,7 @@ object RequestConverter {
         }
     }
 
+    @JvmStatic
     @TypeConverter
     fun toString(value: Request?): String? {
         return value?.tag

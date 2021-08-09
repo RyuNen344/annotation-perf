@@ -4,6 +4,7 @@ import androidx.room.TypeConverter
 import com.ryunen344.annotation.perf.db.feature.tivi.entity.PendingAction
 
 object PendingActionConverter {
+    @JvmStatic
     @TypeConverter
     fun fromString(value: String?): PendingAction? {
         return value?.let {
@@ -11,6 +12,7 @@ object PendingActionConverter {
         }
     }
 
+    @JvmStatic
     @TypeConverter
     fun toString(value: PendingAction?): String? {
         return value?.value

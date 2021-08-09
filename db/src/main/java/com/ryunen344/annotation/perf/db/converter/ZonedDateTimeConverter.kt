@@ -5,6 +5,7 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
 object ZonedDateTimeConverter {
+    @JvmStatic
     @TypeConverter
     fun fromString(value: String?): ZonedDateTime? {
         return value?.let {
@@ -12,6 +13,7 @@ object ZonedDateTimeConverter {
         }
     }
 
+    @JvmStatic
     @TypeConverter
     fun toString(value: ZonedDateTime?): String? {
         return value?.let {

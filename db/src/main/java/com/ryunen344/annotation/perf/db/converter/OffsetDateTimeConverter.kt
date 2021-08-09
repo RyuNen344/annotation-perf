@@ -5,6 +5,7 @@ import java.time.OffsetDateTime
 import java.time.format.DateTimeFormatter
 
 object OffsetDateTimeConverter {
+    @JvmStatic
     @TypeConverter
     fun fromString(value: String?): OffsetDateTime? {
         return value?.let {
@@ -12,6 +13,7 @@ object OffsetDateTimeConverter {
         }
     }
 
+    @JvmStatic
     @TypeConverter
     fun toString(value: OffsetDateTime?): String? {
         return value?.let {

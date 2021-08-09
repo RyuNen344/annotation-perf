@@ -5,6 +5,7 @@ import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
 object LocalTimeConverter {
+    @JvmStatic
     @TypeConverter
     fun fromString(value: String?): LocalTime? {
         return value?.let {
@@ -12,6 +13,7 @@ object LocalTimeConverter {
         }
     }
 
+    @JvmStatic
     @TypeConverter
     fun toString(value: LocalTime?): String? {
         return value?.let {

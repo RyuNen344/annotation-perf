@@ -4,6 +4,7 @@ import androidx.room.TypeConverter
 import com.ryunen344.annotation.perf.db.feature.tivi.entity.ImageType
 
 object ImageTypeConverter {
+    @JvmStatic
     @TypeConverter
     fun fromString(value: String?): ImageType? {
         return value?.let { storageKey ->
@@ -11,6 +12,7 @@ object ImageTypeConverter {
         }
     }
 
+    @JvmStatic
     @TypeConverter
     fun toString(value: ImageType?): String? {
         return value?.storageKey
