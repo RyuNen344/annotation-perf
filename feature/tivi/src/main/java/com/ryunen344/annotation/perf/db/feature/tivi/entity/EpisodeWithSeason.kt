@@ -11,8 +11,13 @@ class EpisodeWithSeason {
     @Relation(parentColumn = "season_id", entityColumn = "id")
     var _seasons: List<Season> = emptyList()
 
-    val season: Season?
-        get() = _seasons.getOrNull(0)
+    /**
+     * val season: Season?
+     *     get() = _seasons.getOrNull(0)
+     */
+    fun season(): Season? {
+        return _seasons.getOrNull(0)
+    }
 
     override fun equals(other: Any?): Boolean = when {
         other === this -> true

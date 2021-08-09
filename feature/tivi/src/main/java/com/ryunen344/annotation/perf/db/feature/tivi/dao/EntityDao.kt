@@ -22,8 +22,8 @@ abstract class EntityDao<in E : TiviEntity> {
     @Delete
     abstract suspend fun deleteEntity(entity: E): Int
 
-    @Transaction
-    open suspend fun withTransaction(tx: suspend () -> Unit) = tx()
+    //    @Transaction
+    //    open suspend fun withTransaction(tx: suspend () -> Unit) = tx()
 
     suspend fun insertOrUpdate(entity: E): Long {
         return if (entity.id == 0L) {

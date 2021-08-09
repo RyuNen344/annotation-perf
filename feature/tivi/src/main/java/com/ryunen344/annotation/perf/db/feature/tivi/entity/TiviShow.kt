@@ -18,35 +18,63 @@ import java.time.ZoneId
     ]
 )
 data class TiviShow(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") override val id: Long = 0,
-    @ColumnInfo(name = "title") val title: String? = null,
-    @ColumnInfo(name = "original_title") val originalTitle: String? = null,
-    @ColumnInfo(name = "trakt_id") override val traktId: Int? = null,
-    @ColumnInfo(name = "tmdb_id") override val tmdbId: Int? = null,
-    @ColumnInfo(name = "imdb_id") val imdbId: String? = null,
-    @ColumnInfo(name = "overview") val summary: String? = null,
-    @ColumnInfo(name = "homepage") val homepage: String? = null,
-    @ColumnInfo(name = "trakt_rating") val traktRating: Float? = null,
-    @ColumnInfo(name = "trakt_votes") val traktVotes: Int? = null,
-    @ColumnInfo(name = "certification") val certification: String? = null,
-    @ColumnInfo(name = "first_aired") val firstAired: OffsetDateTime? = null,
-    @ColumnInfo(name = "country") val country: String? = null,
-    @ColumnInfo(name = "network") val network: String? = null,
-    @ColumnInfo(name = "network_logo_path") val networkLogoPath: String? = null,
-    @ColumnInfo(name = "runtime") val runtime: Int? = null,
-    @ColumnInfo(name = "genres") val _genres: String? = null,
-    @ColumnInfo(name = "last_trakt_data_update") val traktDataUpdate: OffsetDateTime? = null,
-    @ColumnInfo(name = "status") val status: ShowStatus? = null,
-    @ColumnInfo(name = "airs_day") val airsDay: DayOfWeek? = null,
-    @ColumnInfo(name = "airs_time") val airsTime: LocalTime? = null,
-    @ColumnInfo(name = "airs_tz") val airsTimeZone: ZoneId? = null
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    override val id: Long = 0,
+    @ColumnInfo(name = "title")
+    val title: String? = null,
+    @ColumnInfo(name = "original_title")
+    val originalTitle: String? = null,
+    @ColumnInfo(name = "trakt_id")
+    override val traktId: Int? = null,
+    @ColumnInfo(name = "tmdb_id")
+    override val tmdbId: Int? = null,
+    @ColumnInfo(name = "imdb_id")
+    val imdbId: String? = null,
+    @ColumnInfo(name = "overview")
+    val summary: String? = null,
+    @ColumnInfo(name = "homepage")
+    val homepage: String? = null,
+    @ColumnInfo(name = "trakt_rating")
+    val traktRating: Float? = null,
+    @ColumnInfo(name = "trakt_votes")
+    val traktVotes: Int? = null,
+    @ColumnInfo(name = "certification")
+    val certification: String? = null,
+    @ColumnInfo(name = "first_aired")
+    val firstAired: OffsetDateTime? = null,
+    @ColumnInfo(name = "country")
+    val country: String? = null,
+    @ColumnInfo(name = "network")
+    val network: String? = null,
+    @ColumnInfo(name = "network_logo_path")
+    val networkLogoPath: String? = null,
+    @ColumnInfo(name = "runtime")
+    val runtime: Int? = null,
+    @ColumnInfo(name = "genres")
+    val genres: String? = null,
+    @ColumnInfo(name = "last_trakt_data_update")
+    val traktDataUpdate: OffsetDateTime? = null,
+    @ColumnInfo(name = "status")
+    val status: ShowStatus? = null,
+    @ColumnInfo(name = "airs_day")
+    val airsDay: DayOfWeek? = null,
+    @ColumnInfo(name = "airs_time")
+    val airsTime: LocalTime? = null,
+    @ColumnInfo(name = "airs_tz")
+    val airsTimeZone: ZoneId? = null
 ) : TiviEntity, TraktIdEntity, TmdbIdEntity {
     @Ignore
     constructor() : this(0)
 
-    @delegate:Ignore
-    val genres by lazy(LazyThreadSafetyMode.NONE) {
-        _genres?.split(",")?.mapNotNull { Genre.fromTraktValue(it.trim()) } ?: emptyList()
+    /**
+     * @delegate:Ignore
+     * val genres by lazy(LazyThreadSafetyMode.NONE) {
+     *     _genres?.split(",")?.mapNotNull { Genre.fromTraktValue(it.trim()) } ?: emptyList()
+     * }
+     */
+    fun splitGenre(): List<Genre> {
+        return genres?.split(",")?.mapNotNull { Genre.fromTraktValue(it.trim()) } ?: emptyList()
     }
 
     companion object {
@@ -64,7 +92,7 @@ data class TiviShow(
             runtime = trakt.runtime ?: local.runtime,
             country = trakt.country ?: local.country,
             firstAired = trakt.firstAired ?: local.firstAired,
-            _genres = trakt._genres ?: local._genres,
+            genres = trakt.genres ?: local.genres,
             status = trakt.status ?: local.status,
             airsDay = trakt.airsDay ?: local.airsDay,
             airsTimeZone = trakt.airsTimeZone ?: local.airsTimeZone,

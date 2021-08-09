@@ -13,7 +13,25 @@ interface EntryWithShow<ET : Entry> {
             return relations[0]
         }
 
-    val poster: ShowTmdbImage?
+    /**
+     * @delegate:Ignore
+     * val backdrop: ShowTmdbImage? by lazy(LazyThreadSafetyMode.NONE) {
+     *     images.findHighestRatedBackdrop()
+     * }
+     */
+    fun backdrop(): ShowTmdbImage? {
+        return images.findHighestRatedBackdrop()
+    }
+
+    /**
+     * @delegate:Ignore
+     * override val poster: ShowTmdbImage? by lazy(LazyThreadSafetyMode.NONE) {
+     *     images.findHighestRatedPoster()
+     * }
+     */
+    fun poster(): ShowTmdbImage? {
+        return images.findHighestRatedPoster()
+    }
 
     fun generateStableId(): Long {
         return Objects.hash(entry::class.java.name, entry.showId).toLong()

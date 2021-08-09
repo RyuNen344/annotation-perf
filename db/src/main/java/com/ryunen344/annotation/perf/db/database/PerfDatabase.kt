@@ -30,6 +30,24 @@ import com.ryunen344.annotation.perf.db.feature.tivi.converter.ImageTypeConverte
 import com.ryunen344.annotation.perf.db.feature.tivi.converter.PendingActionConverter
 import com.ryunen344.annotation.perf.db.feature.tivi.converter.RequestConverter
 import com.ryunen344.annotation.perf.db.feature.tivi.converter.ShowStatusConverter
+import com.ryunen344.annotation.perf.db.feature.tivi.database.TiviDatabase
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.Episode
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.EpisodeWatchEntry
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.FollowedShowEntry
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.LastRequest
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.PopularShowEntry
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.RecommendedShowEntry
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.RelatedShowEntry
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.Season
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.ShowTmdbImage
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.TiviShow
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.TiviShowFts
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.TraktUser
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.TrendingShowEntry
+import com.ryunen344.annotation.perf.db.feature.tivi.entity.WatchedShowEntry
+import com.ryunen344.annotation.perf.db.feature.tivi.view.FollowedShowsLastWatched
+import com.ryunen344.annotation.perf.db.feature.tivi.view.FollowedShowsNextToWatch
+import com.ryunen344.annotation.perf.db.feature.tivi.view.FollowedShowsWatchStats
 
 @Database(
     entities = [
@@ -45,6 +63,25 @@ import com.ryunen344.annotation.perf.db.feature.tivi.converter.ShowStatusConvert
         TimeSet::class,
         GardenPlanting::class,
         Plant::class,
+        TiviShow::class,
+        TiviShowFts::class,
+        TrendingShowEntry::class,
+        PopularShowEntry::class,
+        TraktUser::class,
+        WatchedShowEntry::class,
+        FollowedShowEntry::class,
+        Season::class,
+        Episode::class,
+        RelatedShowEntry::class,
+        EpisodeWatchEntry::class,
+        LastRequest::class,
+        ShowTmdbImage::class,
+        RecommendedShowEntry::class
+    ],
+    views = [
+        FollowedShowsLastWatched::class,
+        FollowedShowsNextToWatch::class,
+        FollowedShowsWatchStats::class,
     ],
     version = 1,
     exportSchema = false
@@ -65,4 +102,4 @@ import com.ryunen344.annotation.perf.db.feature.tivi.converter.ShowStatusConvert
         ShowStatusConverter::class
     ]
 )
-abstract class PerfDatabase : RoomDatabase(), DagashiDatabase, SimpleDatabase, SunflowerDatabase
+abstract class PerfDatabase : RoomDatabase(), DagashiDatabase, SimpleDatabase, SunflowerDatabase, TiviDatabase

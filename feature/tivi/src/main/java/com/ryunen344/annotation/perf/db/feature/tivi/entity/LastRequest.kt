@@ -12,7 +12,10 @@ import java.time.Instant
 )
 data class LastRequest(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") override val id: Long = 0,
-    @ColumnInfo(name = "request") val request: Request,
-    @ColumnInfo(name = "entity_id") val entityId: Long,
-    @ColumnInfo(name = "timestamp") val timestamp: Instant
+    @ColumnInfo(name = "request")
+    val request: Request,
+    @ColumnInfo(name = "entity_id")
+    val entityId: Long,
+    @ColumnInfo(name = "timestamp")
+    val timestamp: Instant
 ) : TiviEntity

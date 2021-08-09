@@ -24,9 +24,14 @@ import java.time.OffsetDateTime
     ]
 )
 data class EpisodeWatchEntry(
-    @PrimaryKey(autoGenerate = true) override val id: Long = 0,
-    @ColumnInfo(name = "episode_id") val episodeId: Long,
-    @ColumnInfo(name = "trakt_id") val traktId: Long? = null,
-    @ColumnInfo(name = "watched_at") val watchedAt: OffsetDateTime,
-    @ColumnInfo(name = "pending_action") val pendingAction: PendingAction = PendingAction.NOTHING
+    @PrimaryKey(autoGenerate = true)
+    override val id: Long = 0,
+    @ColumnInfo(name = "episode_id")
+    val episodeId: Long,
+    @ColumnInfo(name = "trakt_id")
+    val traktId: Long? = null,
+    @ColumnInfo(name = "watched_at")
+    val watchedAt: OffsetDateTime,
+    @ColumnInfo(name = "pending_action")
+    val pendingAction: PendingAction = PendingAction.NOTHING
 ) : TiviEntity

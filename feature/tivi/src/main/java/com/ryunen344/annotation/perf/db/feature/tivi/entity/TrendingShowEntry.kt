@@ -22,8 +22,12 @@ import androidx.room.PrimaryKey
     ]
 )
 data class TrendingShowEntry(
-    @PrimaryKey(autoGenerate = true) override val id: Long = 0,
-    @ColumnInfo(name = "show_id") override val showId: Long,
-    @ColumnInfo(name = "page") override val page: Int,
-    @ColumnInfo(name = "watchers") val watchers: Int
+    @PrimaryKey(autoGenerate = true)
+    override val id: Long = 0,
+    @ColumnInfo(name = "show_id")
+    override val showId: Long,
+    @ColumnInfo(name = "page")
+    override val page: Int,
+    @ColumnInfo(name = "watchers")
+    val watchers: Int
 ) : PaginatedEntry

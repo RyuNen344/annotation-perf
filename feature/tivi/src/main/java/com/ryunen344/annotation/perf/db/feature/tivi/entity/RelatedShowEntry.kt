@@ -30,8 +30,12 @@ import androidx.room.PrimaryKey
     ]
 )
 data class RelatedShowEntry(
-    @PrimaryKey(autoGenerate = true) override val id: Long = 0,
-    @ColumnInfo(name = "show_id") override val showId: Long,
-    @ColumnInfo(name = "other_show_id") override val otherShowId: Long,
-    @ColumnInfo(name = "order_index") val orderIndex: Int
+    @PrimaryKey(autoGenerate = true)
+    override val id: Long = 0,
+    @ColumnInfo(name = "show_id")
+    override val showId: Long,
+    @ColumnInfo(name = "other_show_id")
+    override val otherShowId: Long,
+    @ColumnInfo(name = "order_index")
+    val orderIndex: Int
 ) : MultipleEntry

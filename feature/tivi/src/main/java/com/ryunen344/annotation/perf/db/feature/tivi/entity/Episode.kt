@@ -3,7 +3,6 @@ package com.ryunen344.annotation.perf.db.feature.tivi.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
-import androidx.room.Ignore
 import androidx.room.Index
 import androidx.room.PrimaryKey
 import java.time.OffsetDateTime
@@ -25,22 +24,39 @@ import java.time.OffsetDateTime
     ]
 )
 data class Episode(
-    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") override val id: Long = 0,
-    @ColumnInfo(name = "season_id") val seasonId: Long,
-    @ColumnInfo(name = "trakt_id") override val traktId: Int? = null,
-    @ColumnInfo(name = "tmdb_id") override val tmdbId: Int? = null,
-    @ColumnInfo(name = "title") val title: String? = null,
-    @ColumnInfo(name = "overview") val summary: String? = null,
-    @ColumnInfo(name = "number") val number: Int? = null,
-    @ColumnInfo(name = "first_aired") val firstAired: OffsetDateTime? = null,
-    @ColumnInfo(name = "trakt_rating") val traktRating: Float? = null,
-    @ColumnInfo(name = "trakt_rating_votes") val traktRatingVotes: Int? = null,
-    @ColumnInfo(name = "tmdb_backdrop_path") val tmdbBackdropPath: String? = null
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    override val id: Long = 0,
+    @ColumnInfo(name = "season_id")
+    val seasonId: Long,
+    @ColumnInfo(name = "trakt_id")
+    override val traktId: Int? = null,
+    @ColumnInfo(name = "tmdb_id")
+    override val tmdbId: Int? = null,
+    @ColumnInfo(name = "title")
+    val title: String? = null,
+    @ColumnInfo(name = "overview")
+    val summary: String? = null,
+    @ColumnInfo(name = "number")
+    val number: Int? = null,
+    @ColumnInfo(name = "first_aired")
+    val firstAired: OffsetDateTime? = null,
+    @ColumnInfo(name = "trakt_rating")
+    val traktRating: Float? = null,
+    @ColumnInfo(name = "trakt_rating_votes")
+    val traktRatingVotes: Int? = null,
+    @ColumnInfo(name = "tmdb_backdrop_path")
+    val tmdbBackdropPath: String? = null
 ) : TiviEntity, TraktIdEntity, TmdbIdEntity {
     companion object {
         val EMPTY = Episode(seasonId = 0)
     }
 
-    @delegate:Ignore
-    val isAired by lazy { firstAired?.isBefore(OffsetDateTime.now()) ?: false }
+    /**
+     * @delegate:Ignore
+     * val isAired by lazy { firstAired?.isBefore(OffsetDateTime.now()) ?: false }
+     */
+    fun isAired(): Boolean {
+        return firstAired?.isBefore(OffsetDateTime.now()) ?: false
+    }
 }
