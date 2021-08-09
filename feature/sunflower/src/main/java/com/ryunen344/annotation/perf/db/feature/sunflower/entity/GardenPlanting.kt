@@ -1,4 +1,4 @@
-package com.ryunen344.annotation.perf.db.entity.sunflower
+package com.ryunen344.annotation.perf.db.feature.sunflower.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

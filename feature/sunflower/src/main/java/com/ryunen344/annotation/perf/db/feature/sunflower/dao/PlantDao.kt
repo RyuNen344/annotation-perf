@@ -1,10 +1,10 @@
-package com.ryunen344.annotation.perf.db.dao.sunflower
+package com.ryunen344.annotation.perf.db.feature.sunflower.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.ryunen344.annotation.perf.db.entity.sunflower.Plant
+import com.ryunen344.annotation.perf.db.feature.sunflower.entity.Plant
 import kotlinx.coroutines.flow.Flow
 
 @Dao

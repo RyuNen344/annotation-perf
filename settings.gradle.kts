@@ -23,4 +23,5 @@ include(
     ":db",
     ":feature:dagashi",
     ":feature:simple",
+    ":feature:sunflower",
 )
