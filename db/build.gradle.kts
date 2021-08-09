@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
     kotlin("android")
-    //    kotlin("kapt")
+//    kotlin("kapt")
     id("com.google.devtools.ksp")
 }
 
@@ -32,6 +32,7 @@ android {
 
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
-    implementation("androidx.room:room-runtime:2.3.0")
+    implementation("androidx.room:room-ktx:2.3.0")
     ksp("androidx.room:room-compiler:2.3.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1")
 }

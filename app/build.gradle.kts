@@ -40,7 +40,7 @@ dependencies {
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")
 
-    implementation("androidx.room:room-runtime:2.3.0")
+    implementation("androidx.room:room-ktx:2.3.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("androidx.room:room-testing:2.3.0")
