@@ -16,5 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AnnotationPerf"
 include ':app'
-include ':legacy'
-include ':newbie'
+include ':db'
