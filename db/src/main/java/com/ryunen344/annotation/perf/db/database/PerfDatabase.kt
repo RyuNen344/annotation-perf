@@ -11,8 +11,7 @@ import com.ryunen344.annotation.perf.db.converter.LocalTimeConverter
 import com.ryunen344.annotation.perf.db.converter.OffsetDateTimeConverter
 import com.ryunen344.annotation.perf.db.converter.ZoneIdConverter
 import com.ryunen344.annotation.perf.db.converter.ZonedDateTimeConverter
-import com.ryunen344.annotation.perf.db.feature.dagashi.dao.IssueDao
-import com.ryunen344.annotation.perf.db.feature.dagashi.dao.MileStoneDao
+import com.ryunen344.annotation.perf.db.feature.dagashi.database.DagashiDatabase
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.CommentEntity
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.IssueEntity
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.IssueFts
@@ -21,12 +20,10 @@ import com.ryunen344.annotation.perf.db.feature.dagashi.entity.MileStoneEntity
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.StashedIssueEntity
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.SummaryIssueEntity
 import com.ryunen344.annotation.perf.db.feature.dagashi.entity.relation.IssueLabelCrossRef
-import com.ryunen344.annotation.perf.db.feature.simple.dao.SimpleUserDao
-import com.ryunen344.annotation.perf.db.feature.simple.dao.TimeSetDao
+import com.ryunen344.annotation.perf.db.feature.simple.database.SimpleDatabase
 import com.ryunen344.annotation.perf.db.feature.simple.entity.SimpleUser
 import com.ryunen344.annotation.perf.db.feature.simple.entity.TimeSet
-import com.ryunen344.annotation.perf.db.feature.sunflower.dao.GardenPlantingDao
-import com.ryunen344.annotation.perf.db.feature.sunflower.dao.PlantDao
+import com.ryunen344.annotation.perf.db.feature.sunflower.database.SunflowerDatabase
 import com.ryunen344.annotation.perf.db.feature.sunflower.entity.GardenPlanting
 import com.ryunen344.annotation.perf.db.feature.sunflower.entity.Plant
 import com.ryunen344.annotation.perf.db.feature.tivi.converter.ImageTypeConverter
@@ -68,11 +65,4 @@ import com.ryunen344.annotation.perf.db.feature.tivi.converter.ShowStatusConvert
         ShowStatusConverter::class
     ]
 )
-abstract class PerfDatabase : RoomDatabase() {
-    abstract val issueDao: IssueDao
-    abstract val mileStoneDao: MileStoneDao
-    abstract val simpleUserDao: SimpleUserDao
-    abstract val timeSetDao: TimeSetDao
-    abstract val gardenPlantingDao: GardenPlantingDao
-    abstract val plantDao: PlantDao
-}
+abstract class PerfDatabase : RoomDatabase(), DagashiDatabase, SimpleDatabase, SunflowerDatabase
