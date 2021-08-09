@@ -1,3 +1,10 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+    }
+}
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -6,6 +13,7 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
+
 rootProject.name = "AnnotationPerf"
 include ':app'
 include ':legacy'

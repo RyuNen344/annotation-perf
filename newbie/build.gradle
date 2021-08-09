@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'com.google.devtools.ksp' version '1.5.21-1.0.0-beta06'
 }
 
 android {
@@ -30,5 +31,6 @@ android {
 }
 
 dependencies {
-    implementation "androidx.room:room-runtime:2.4.0-alpha04"
+    implementation 'androidx.room:room-runtime:2.3.0'
+    ksp 'androidx.room:room-compiler:2.3.0'
 }
