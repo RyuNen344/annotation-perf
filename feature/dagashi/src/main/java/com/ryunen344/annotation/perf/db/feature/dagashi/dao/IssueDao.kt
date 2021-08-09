@@ -1,14 +1,14 @@
-package com.ryunen344.annotation.perf.db.dao.dagashi
+package com.ryunen344.annotation.perf.db.feature.dagashi.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
-import com.ryunen344.annotation.perf.db.entity.dagashi.CommentEntity
-import com.ryunen344.annotation.perf.db.entity.dagashi.IssueEntity
-import com.ryunen344.annotation.perf.db.entity.dagashi.LabelEntity
-import com.ryunen344.annotation.perf.db.entity.dagashi.StashedIssueEntity
-import com.ryunen344.annotation.perf.db.entity.dagashi.combined.IssueWithLabelAndCommentOnStash
-import com.ryunen344.annotation.perf.db.entity.dagashi.relation.IssueLabelCrossRef
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.CommentEntity
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.IssueEntity
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.LabelEntity
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.StashedIssueEntity
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.combined.IssueWithLabelAndCommentOnStash
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.relation.IssueLabelCrossRef
 import kotlinx.coroutines.flow.Flow
 
 @Dao

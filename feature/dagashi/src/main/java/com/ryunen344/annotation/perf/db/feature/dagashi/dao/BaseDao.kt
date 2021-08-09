@@ -1,4 +1,4 @@
-package com.ryunen344.annotation.perf.db.dao.dagashi
+package com.ryunen344.annotation.perf.db.feature.dagashi.dao
 
 import androidx.room.Dao
 import androidx.room.Delete

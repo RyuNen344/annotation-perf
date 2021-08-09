@@ -1,10 +1,10 @@
-package com.ryunen344.annotation.perf.db.entity.dagashi.relation
+package com.ryunen344.annotation.perf.db.feature.dagashi.entity.relation
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
-import com.ryunen344.annotation.perf.db.entity.dagashi.IssueEntity
-import com.ryunen344.annotation.perf.db.entity.dagashi.LabelEntity
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.IssueEntity
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.LabelEntity
 
 @Entity(
     primaryKeys = ["single_unique_id", "label_name"],

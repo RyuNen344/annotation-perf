@@ -1,4 +1,4 @@
-package com.ryunen344.annotation.perf.db.entity.dagashi
+package com.ryunen344.annotation.perf.db.feature.dagashi.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Embedded

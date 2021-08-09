@@ -18,4 +18,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "AnnotationPerf"
-include(":app", ":db")
+include(":app", ":db", ":feature:dagashi")

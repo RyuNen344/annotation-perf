@@ -1,11 +1,11 @@
-package com.ryunen344.annotation.perf.db.dao.dagashi
+package com.ryunen344.annotation.perf.db.feature.dagashi.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
-import com.ryunen344.annotation.perf.db.entity.dagashi.MileStoneEntity
-import com.ryunen344.annotation.perf.db.entity.dagashi.SummaryIssueEntity
-import com.ryunen344.annotation.perf.db.entity.dagashi.combined.MileStoneWithSummaryIssue
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.MileStoneEntity
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.SummaryIssueEntity
+import com.ryunen344.annotation.perf.db.feature.dagashi.entity.combined.MileStoneWithSummaryIssue
 import kotlinx.coroutines.flow.Flow
 
 @Dao
