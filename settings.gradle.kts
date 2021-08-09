@@ -3,6 +3,9 @@ pluginManagement {
         gradlePluginPortal()
         google()
     }
+    plugins {
+        id("com.google.devtools.ksp") version "1.4.32-1.0.0-alpha08"
+    }
 }
 
 dependencyResolutionManagement {
@@ -15,5 +18,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "AnnotationPerf"
-include ':app'
-include ':db'
+include(":app", ":db")

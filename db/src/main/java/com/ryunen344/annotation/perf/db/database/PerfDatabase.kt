@@ -7,5 +7,5 @@ import com.ryunen344.annotation.perf.db.entity.User
 
 @Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class PerfDatabase : RoomDatabase() {
-    abstract fun newbieUserDao(): UserDao
+    abstract fun userDao(): UserDao
 }
