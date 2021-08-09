@@ -1,8 +1,8 @@
-package com.ryunen344.annotation.perf.db.dao
+package com.ryunen344.annotation.perf.db.feature.simple.dao
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.ryunen344.annotation.perf.db.entity.TimeSet
+import com.ryunen344.annotation.perf.db.feature.simple.entity.TimeSet
 
 @Dao
 interface TimeSetDao {

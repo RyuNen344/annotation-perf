@@ -1,4 +1,4 @@
-package com.ryunen344.annotation.perf.db.entity
+package com.ryunen344.annotation.perf.db.feature.simple.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,10 +1,10 @@
-package com.ryunen344.annotation.perf.db.dao
+package com.ryunen344.annotation.perf.db.feature.simple.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.ryunen344.annotation.perf.db.entity.User
+import com.ryunen344.annotation.perf.db.feature.simple.entity.User
 
 @Dao
 interface UserDao {
