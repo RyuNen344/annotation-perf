@@ -31,14 +31,14 @@ android {
 }
 
 dependencies {
-    implementation(project(":feature:dagashi"))
-    implementation(project(":feature:simple"))
-    implementation(project(":feature:sunflower"))
-    implementation(project(":feature:tivi"))
+    api(project(":feature:dagashi"))
+    api(project(":feature:simple"))
+    api(project(":feature:sunflower"))
+    api(project(":feature:tivi"))
 
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
     implementation("androidx.paging:paging-common-ktx:3.0.1")
-    implementation("androidx.room:room-ktx:2.3.0")
-    ksp("androidx.room:room-compiler:2.3.0")
+    implementation("androidx.room:room-ktx:2.4.0-alpha04")
+    ksp("androidx.room:room-compiler:2.4.0-alpha04")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1")
 }
