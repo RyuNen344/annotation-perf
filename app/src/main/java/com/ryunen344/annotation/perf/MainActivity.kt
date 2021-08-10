@@ -17,7 +17,5 @@ class MainActivity : AppCompatActivity() {
             applicationContext,
             PerfDatabase::class.java, "database-name"
         ).build()
-
-        db.userDao().getAll()
     }
 }
