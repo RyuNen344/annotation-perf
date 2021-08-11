@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title>Profile report</title>
+    <link href="css/base-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+    <h1>Profile report</h1>
+    <div id="header">
+        <p>Profiled build: :db:kspDebugKotlin </p>
+        <p>Started on: 2021/08/12 - 01:17:20</p>
+    </div>
+    <div id="tabs">
+        <ul class="tabLinks">
+            <li>
+                <a href="#tab0">Summary</a>
+            </li>
+            <li>
+                <a href="#tab1">Configuration</a>
+            </li>
+            <li>
+                <a href="#tab2">Dependency Resolution</a>
+            </li>
+            <li>
+                <a href="#tab3">Artifact Transforms</a>
+            </li>
+            <li>
+                <a href="#tab4">Task Execution</a>
+            </li>
+        </ul>
+        <div class="tab" id="tab0">
+            <h2>Summary</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Description</th>
+                    <th class="numeric">Duration</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>Total Build Time</td>
+                    <td class="numeric">10.337s</td>
+                </tr>
+                <tr>
+                    <td>Startup</td>
+                    <td class="numeric">0.612s</td>
+                </tr>
+                <tr>
+                    <td>Settings and buildSrc</td>
+                    <td class="numeric">0.004s</td>
+                </tr>
+                <tr>
+                    <td>Loading Projects</td>
+                    <td class="numeric">0.003s</td>
+                </tr>
+                <tr>
+                    <td>Configuring Projects</td>
+                    <td class="numeric">0.129s</td>
+                </tr>
+                <tr>
+                    <td>Artifact Transforms</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>Task Execution</td>
+                    <td class="numeric">9.495s</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab" id="tab1">
+            <h2>Configuration</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Project</th>
+                    <th class="numeric">Duration</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>All projects</td>
+                    <td class="numeric">0.129s</td>
+                </tr>
+                <tr>
+                    <td>:</td>
+                    <td class="numeric">0.043s</td>
+                </tr>
+                <tr>
+                    <td>:db</td>
+                    <td class="numeric">0.025s</td>
+                </tr>
+                <tr>
+                    <td>:app</td>
+                    <td class="numeric">0.018s</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple</td>
+                    <td class="numeric">0.011s</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower</td>
+                    <td class="numeric">0.011s</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi</td>
+                    <td class="numeric">0.011s</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi</td>
+                    <td class="numeric">0.009s</td>
+                </tr>
+                <tr>
+                    <td>:feature</td>
+                    <td class="numeric">0.001s</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab" id="tab2">
+            <h2>Dependency Resolution</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Dependencies</th>
+                    <th class="numeric">Duration</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>All dependencies</td>
+                    <td class="numeric">0.228s</td>
+                </tr>
+                <tr>
+                    <td>:db:ksp</td>
+                    <td class="numeric">0.033s</td>
+                </tr>
+                <tr>
+                    <td>:classpath</td>
+                    <td class="numeric">0.030s</td>
+                </tr>
+                <tr>
+                    <td>:db:debugCompileClasspath</td>
+                    <td class="numeric">0.015s</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi:debugCompileClasspath</td>
+                    <td class="numeric">0.015s</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple:debugCompileClasspath</td>
+                    <td class="numeric">0.015s</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower:debugCompileClasspath</td>
+                    <td class="numeric">0.012s</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi:debugCompileClasspath</td>
+                    <td class="numeric">0.011s</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi:debugRuntimeClasspath</td>
+                    <td class="numeric">0.010s</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple:debugRuntimeClasspath</td>
+                    <td class="numeric">0.010s</td>
+                </tr>
+                <tr>
+                    <td>:db:debugRuntimeClasspath</td>
+                    <td class="numeric">0.009s</td>
+                </tr>
+                <tr>
+                    <td>:db:classpath</td>
+                    <td class="numeric">0.008s</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower:kotlinCompilerClasspath</td>
+                    <td class="numeric">0.008s</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi:kotlinCompilerClasspath</td>
+                    <td class="numeric">0.007s</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi:debugRuntimeClasspath</td>
+                    <td class="numeric">0.006s</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower:debugRuntimeClasspath</td>
+                    <td class="numeric">0.005s</td>
+                </tr>
+                <tr>
+                    <td>:db:kotlinCompilerPluginClasspathDebug</td>
+                    <td class="numeric">0.004s</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple:kotlinCompilerClasspath</td>
+                    <td class="numeric">0.004s</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower:androidApis</td>
+                    <td class="numeric">0.004s</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi:kotlinCompilerClasspath</td>
+                    <td class="numeric">0.004s</td>
+                </tr>
+                <tr>
+                    <td>:db:kotlinCompilerClasspath</td>
+                    <td class="numeric">0.003s</td>
+                </tr>
+                <tr>
+                    <td>:db:kspDebugKotlinProcessorClasspath</td>
+                    <td class="numeric">0.003s</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi:androidApis</td>
+                    <td class="numeric">0.003s</td>
+                </tr>
+                <tr>
+                    <td>:db:androidApis</td>
+                    <td class="numeric">0.002s</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi:androidApis</td>
+                    <td class="numeric">0.002s</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple:androidApis</td>
+                    <td class="numeric">0.001s</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple:classpath</td>
+                    <td class="numeric">0.001s</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple:kotlinCompilerPluginClasspathDebug</td>
+                    <td class="numeric">0.001s</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower:debugAnnotationProcessorClasspath</td>
+                    <td class="numeric">0.001s</td>
+                </tr>
+                <tr>
+                    <td>detachedConfiguration1</td>
+                    <td class="numeric">0.001s</td>
+                </tr>
+                <tr>
+                    <td>:app:classpath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:classpath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi:classpath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi:debugAnnotationProcessorClasspath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi:kotlinCompilerPluginClasspathDebug</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple:debugAnnotationProcessorClasspath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower:classpath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower:kotlinCompilerPluginClasspathDebug</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi:classpath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi:debugAnnotationProcessorClasspath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi:kotlinCompilerPluginClasspathDebug</td>
+                    <td class="numeric">0s</td>
+                </tr>
+                <tr>
+                    <td>classpath</td>
+                    <td class="numeric">0s</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab" id="tab3">
+            <h2>Artifact Transforms</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Transform</th>
+                    <th class="numeric">Duration</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>All transforms</td>
+                    <td class="numeric">0s</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab" id="tab4">
+            <h2>Task Execution</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Task</th>
+                    <th class="numeric">Duration</th>
+                    <th>Result</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>:db</td>
+                    <td class="numeric">3.727s</td>
+                    <td>(total)</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:kspDebugKotlin</td>
+                    <td class="numeric">3.658s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:generateDebugRFile</td>
+                    <td class="numeric">0.033s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:processDebugManifest</td>
+                    <td class="numeric">0.014s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:parseDebugLocalResources</td>
+                    <td class="numeric">0.011s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:packageDebugResources</td>
+                    <td class="numeric">0.008s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:generateDebugResValues</td>
+                    <td class="numeric">0.002s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:compileDebugRenderscript</td>
+                    <td class="numeric">0.001s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:generateDebugResources</td>
+                    <td class="numeric">0s</td>
+                    <td>Did No Work</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:preBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:db:preDebugBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td>:feature:tivi</td>
+                    <td class="numeric">3.460s</td>
+                    <td>(total)</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:compileDebugKotlin</td>
+                    <td class="numeric">3.232s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:compileDebugJavaWithJavac</td>
+                    <td class="numeric">0.092s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:bundleLibCompileToJarDebug</td>
+                    <td class="numeric">0.036s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:generateDebugRFile</td>
+                    <td class="numeric">0.024s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:javaPreCompileDebug</td>
+                    <td class="numeric">0.018s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:processDebugManifest</td>
+                    <td class="numeric">0.016s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:packageDebugResources</td>
+                    <td class="numeric">0.015s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:parseDebugLocalResources</td>
+                    <td class="numeric">0.015s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:generateDebugBuildConfig</td>
+                    <td class="numeric">0.010s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:generateDebugResValues</td>
+                    <td class="numeric">0.002s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:compileDebugAidl</td>
+                    <td class="numeric">0s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:compileDebugRenderscript</td>
+                    <td class="numeric">0s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:generateDebugResources</td>
+                    <td class="numeric">0s</td>
+                    <td>Did No Work</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:packageDebugRenderscript</td>
+                    <td class="numeric">0s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:preBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:tivi:preDebugBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td>:feature:dagashi</td>
+                    <td class="numeric">1.059s</td>
+                    <td>(total)</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:compileDebugKotlin</td>
+                    <td class="numeric">0.858s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:compileDebugJavaWithJavac</td>
+                    <td class="numeric">0.097s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:generateDebugRFile</td>
+                    <td class="numeric">0.030s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:bundleLibCompileToJarDebug</td>
+                    <td class="numeric">0.027s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:processDebugManifest</td>
+                    <td class="numeric">0.014s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:packageDebugResources</td>
+                    <td class="numeric">0.010s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:generateDebugBuildConfig</td>
+                    <td class="numeric">0.009s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:parseDebugLocalResources</td>
+                    <td class="numeric">0.008s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:javaPreCompileDebug</td>
+                    <td class="numeric">0.004s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:generateDebugResValues</td>
+                    <td class="numeric">0.001s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:packageDebugRenderscript</td>
+                    <td class="numeric">0.001s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:compileDebugAidl</td>
+                    <td class="numeric">0s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:compileDebugRenderscript</td>
+                    <td class="numeric">0s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:generateDebugResources</td>
+                    <td class="numeric">0s</td>
+                    <td>Did No Work</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:preBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:dagashi:preDebugBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td>:feature:sunflower</td>
+                    <td class="numeric">0.675s</td>
+                    <td>(total)</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:compileDebugKotlin</td>
+                    <td class="numeric">0.477s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:compileDebugJavaWithJavac</td>
+                    <td class="numeric">0.090s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:generateDebugRFile</td>
+                    <td class="numeric">0.038s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:processDebugManifest</td>
+                    <td class="numeric">0.017s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:bundleLibCompileToJarDebug</td>
+                    <td class="numeric">0.013s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:parseDebugLocalResources</td>
+                    <td class="numeric">0.013s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:packageDebugResources</td>
+                    <td class="numeric">0.011s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:generateDebugBuildConfig</td>
+                    <td class="numeric">0.008s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:javaPreCompileDebug</td>
+                    <td class="numeric">0.004s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:generateDebugResValues</td>
+                    <td class="numeric">0.003s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:packageDebugRenderscript</td>
+                    <td class="numeric">0.001s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:compileDebugAidl</td>
+                    <td class="numeric">0s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:compileDebugRenderscript</td>
+                    <td class="numeric">0s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:generateDebugResources</td>
+                    <td class="numeric">0s</td>
+                    <td>Did No Work</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:preBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:sunflower:preDebugBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td>:feature:simple</td>
+                    <td class="numeric">0.574s</td>
+                    <td>(total)</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:compileDebugKotlin</td>
+                    <td class="numeric">0.372s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:compileDebugJavaWithJavac</td>
+                    <td class="numeric">0.061s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:generateDebugRFile</td>
+                    <td class="numeric">0.044s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:processDebugManifest</td>
+                    <td class="numeric">0.032s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:parseDebugLocalResources</td>
+                    <td class="numeric">0.026s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:bundleLibCompileToJarDebug</td>
+                    <td class="numeric">0.011s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:generateDebugBuildConfig</td>
+                    <td class="numeric">0.011s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:packageDebugResources</td>
+                    <td class="numeric">0.010s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:javaPreCompileDebug</td>
+                    <td class="numeric">0.003s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:generateDebugResValues</td>
+                    <td class="numeric">0.002s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:compileDebugRenderscript</td>
+                    <td class="numeric">0.001s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:packageDebugRenderscript</td>
+                    <td class="numeric">0.001s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:compileDebugAidl</td>
+                    <td class="numeric">0s</td>
+                    <td>NO-SOURCE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:generateDebugResources</td>
+                    <td class="numeric">0s</td>
+                    <td>Did No Work</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:preBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td class="indentPath">:feature:simple:preDebugBuild</td>
+                    <td class="numeric">0s</td>
+                    <td>UP-TO-DATE</td>
+                </tr>
+                <tr>
+                    <td>:</td>
+                    <td class="numeric">0s</td>
+                    <td>(total)</td>
+                </tr>
+                <tr>
+                    <td>:app</td>
+                    <td class="numeric">0s</td>
+                    <td>(total)</td>
+                </tr>
+                <tr>
+                    <td>:feature</td>
+                    <td class="numeric">0s</td>
+                    <td>(total)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="footer">
+        <p>
+        <div>
+            <label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap
+                lines
+                <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+            </label>
+        </div>
+        Generated by
+        <a href="http://www.gradle.org">Gradle 7.0.2</a> at 2021/08/12 1:17:30</p>
+    </div>
+</div>
+</body>
+</html>
